@@ -9,8 +9,9 @@
 
     <TextView
         android:gravity="center"
-        android:text="欢迎"
+        android:text="@string/welcome"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:textSize="20dp"/>
 
 </android.support.constraint.ConstraintLayout>

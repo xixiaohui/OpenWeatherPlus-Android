@@ -199,8 +199,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener, 
             public void onError(Throwable throwable) {
                 List<CityBean> cityBeans = new ArrayList<>();
                 CityBean cityBean = new CityBean();
-                cityBean.setCityName("北京");
-                cityBean.setCityId("CN101010100");
+                cityBean.setCityName("纽约");
+                cityBean.setCityId("US3290117");
                 cityBeans.add(cityBean);
                 getData(cityBeans, first);
             }

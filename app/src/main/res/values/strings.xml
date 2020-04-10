@@ -66,5 +66,6 @@
     <string name="Madrid">马德里</string>
     <string name="Popular_Location">热门城市</string>
     <string name="powered"></string>
+    <string name="welcome">欢迎来到全球天气</string>
 
 </resources>
