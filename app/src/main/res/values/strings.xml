@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">天气普拉斯</string>
+    <string name="app_name">全球天气</string>
     <string name="today">今天</string>
     <string name="tomorrow">明天</string>
     <string name="after_t">后天</string>
@@ -65,6 +65,6 @@
     <string name="Bangkok">曼谷</string>
     <string name="Madrid">马德里</string>
     <string name="Popular_Location">热门城市</string>
-    <string name="powered">Powered By heweather.com</string>
+    <string name="powered"></string>
 
 </resources>

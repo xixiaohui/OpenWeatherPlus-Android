@@ -49,7 +49,7 @@
         <!-- 设置key -->
         <meta-data
             android:name="com.amap.api.v2.apikey"
-            android:value="9656fca1e4cef43a19082b4f37b600bb" />
+            android:value="e6718cc05bac7f2d02be79d83c18bc9b" />
 
         <service android:name="com.amap.api.location.APSService" />
         <service

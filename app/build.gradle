@@ -13,10 +13,10 @@ android {
     }
     signingConfigs {
         he {
-            keyAlias "heweather"
-            keyPassword "He123qwe."
-            storeFile rootProject.file("he.jks")
-            storePassword "He123qwe."
+            keyAlias "myweather"
+            keyPassword "My123xixi"
+            storeFile rootProject.file("my.jks")
+            storePassword "My123xixi"
         }
     }
     buildTypes {
@@ -52,6 +52,10 @@ android {
         // by a similar customization.
         debug.setRoot('build-types/debug')
         release.setRoot('build-types/release')
+    }
+    lintOptions{
+        checkReleaseBuilds false
+        abortOnError false
     }
 }
 buildscript {

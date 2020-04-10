@@ -1,9 +1,8 @@
 <resources>
-    <string name="app_name">OpenWeather+</string>
+    <string name="app_name">Global Weather</string>
     <string name="today">Today</string>
     <string name="tomorrow">Tomorrow</string>
-    <string name="after_t">后天</string>
-
+    <string name="after_t">Day After Tomorrow</string>
     <string name="hello_blank_fragment">blank fragment</string>
     <string name="today_title">Today Details</string>
     <string name="max_tmp">MAX</string>
@@ -65,6 +64,6 @@
     <string name="Cape_Town">Cape Town</string>
     <string name="Bangkok">Bangkok</string>
     <string name="Madrid">Madrid</string>
-    <string name="powered">Powered By heweather.com</string>
+    <string name="powered"></string>
 
 </resources>

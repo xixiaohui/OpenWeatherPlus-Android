@@ -10,9 +10,9 @@ import com.heweather.owp.MyApplication;
 public class ContentUtil {
 
     //用户id
-    public static final String APK_USERNAME = "HE1903211415311839";
+    public static final String APK_USERNAME = "HE2004091051171061";
     //用户key
-    public static final String APK_KEY = "a7b3fdf76a2b44fc91e36b2afe63d080";
+    public static final String APK_KEY = "4d7b5da90d924c27a351caf1c76a388e";
     //当前所在位置
     public static Double NOW_LON = 116.40;
     public static Double NOW_LAT = 39.9;
