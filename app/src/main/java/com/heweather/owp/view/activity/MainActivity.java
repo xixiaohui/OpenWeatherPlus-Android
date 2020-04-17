@@ -98,7 +98,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener, 
                 ContentUtil.NOW_LON = aMapLocation.getLongitude();
                 ContentUtil.NOW_LAT = aMapLocation.getLatitude();
                 getNowCity(true);
-                mLocationClient.onDestroy();
+                    mLocationClient.onDestroy();
             } else {
                 if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.ACCESS_FINE_LOCATION)
                         != PackageManager.PERMISSION_GRANTED || ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.READ_EXTERNAL_STORAGE)
@@ -445,7 +445,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener, 
                     locaitonsEn.remove(0);
                     locaitonsEn.add(0, location);
                     tvLocation.setText(locaitonsEn.get(mNum));
-                }else if (lang == Lang.CHINESE_SIMPLIFIED){
+                } else if (lang == Lang.CHINESE_SIMPLIFIED) {
                     locaitons.remove(0);
                     locaitons.add(0, location);
                     tvLocation.setText(locaitons.get(mNum));

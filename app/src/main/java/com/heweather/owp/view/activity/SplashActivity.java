@@ -12,6 +12,7 @@ import android.support.v7.app.AppCompatActivity;
 import com.heweather.owp.R;
 import com.heweather.owp.service.LocationService;
 
+
 public class SplashActivity extends AppCompatActivity {
     final int REQUEST_PERMISSION_LOCATION = 10;
 

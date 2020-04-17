@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "565100371037",
+    "firebase_url": "https://global-weather-ccc54.firebaseio.com",
+    "project_id": "global-weather-ccc54",
+    "storage_bucket": "global-weather-ccc54.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:565100371037:android:8632ccded995947332c1b4",
+        "android_client_info": {
+          "package_name": "com.heweather.owp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "565100371037-k0sc4blvs20eobe0kjv6uj8eke84aqq7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.heweather.owp",
+            "certificate_hash": "a1e6ff9955bc1d3fee275e74fb59ee33bf397531"
+          }
+        },
+        {
+          "client_id": "565100371037-1209djrihlgqlbfb3sekj4tu7gkuuqj0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBYJL0z5Gqey2nniOZOyYgYEALPmn01B5U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "565100371037-1209djrihlgqlbfb3sekj4tu7gkuuqj0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

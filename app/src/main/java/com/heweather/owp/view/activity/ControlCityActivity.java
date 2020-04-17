@@ -1,11 +1,12 @@
 package com.heweather.owp.view.activity;
 
 import android.os.Bundle;
-import android.support.v7.widget.DefaultItemAnimator;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+
 import android.view.View;
 import android.widget.ImageView;
+
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.heweather.owp.R;
 import com.heweather.owp.adapter.ControlCityAdapter;
@@ -23,6 +24,7 @@ public class ControlCityActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_control_city);
         ImageView ivBack = findViewById(R.id.iv_control_back);
         ivBack.setOnClickListener(new View.OnClickListener() {

@@ -469,7 +469,7 @@ public class SpUtils {
      * @return 返回我们封装好的该实体类(obj)
      */
     public static <T> T getBean(Context context, String key,
-                                Class<T> clazz) {
+            Class<T> clazz) {
         String objString = context.getSharedPreferences(PREFERENCE_NAME, Context.MODE_PRIVATE).getString(key, "");
         Gson gson = new Gson();
         return gson.fromJson(objString, clazz);
