@@ -67,5 +67,7 @@
     <string name="Popular_Location">热门城市</string>
     <string name="powered"></string>
     <string name="welcome">欢迎来到全球天气</string>
+    <string name="copyright">和风天气</string>
+    <string name="copyright_res">数据来源</string>
 
 </resources>

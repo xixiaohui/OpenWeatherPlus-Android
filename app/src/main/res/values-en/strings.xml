@@ -66,5 +66,7 @@
     <string name="Madrid">Madrid</string>
     <string name="powered"></string>
     <string name="welcome">Welcome to Global Weather</string>
+    <string name="copyright">He Weather</string>
+    <string name="copyright_res">Data From</string>
 
 </resources>

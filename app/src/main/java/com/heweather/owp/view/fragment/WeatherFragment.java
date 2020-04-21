@@ -155,6 +155,22 @@ public class WeatherFragment extends Fragment implements WeatherInterface {
         return rootView;
     }
 
+    @Override
+    public void onPause() {
+        if (adView != null) {
+            adView.pause();
+        }
+        super.onPause();
+    }
+
+    @Override
+    public void onDestroy() {
+        if (adView != null) {
+            adView.destroy();
+        }
+        super.onDestroy();
+    }
+
     /**
      * 增加banner 广告
      */
@@ -364,6 +380,10 @@ public class WeatherFragment extends Fragment implements WeatherInterface {
     @Override
     public void onResume() {
         super.onResume();
+        if (adView != null) {
+            adView.resume();
+        }
+
         isEn = ContentUtil.APP_SETTING_LANG.equals("en") || ContentUtil.APP_SETTING_LANG.equals("sys") && ContentUtil.SYS_LANG.equals("en");
         if (!language.equalsIgnoreCase(ContentUtil.SYS_LANG)) {
             changeLang();
