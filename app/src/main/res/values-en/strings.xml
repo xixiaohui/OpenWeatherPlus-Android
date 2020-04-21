@@ -68,5 +68,6 @@
     <string name="welcome">Welcome to Global Weather</string>
     <string name="copyright">He Weather</string>
     <string name="copyright_res">Data From</string>
+    <string name="good">good</string>
 
 </resources>

@@ -111,7 +111,7 @@
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:layout_marginStart="35dp"
-                app:srcCompat="@mipmap/icon_rainfall" />
+                android:src="@mipmap/icon_rainfall" />
 
             <TextView
                 android:id="@+id/tv_rain"
@@ -148,7 +148,7 @@
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:layout_marginStart="30dp"
-                app:srcCompat="@mipmap/icon_hum" />
+                android:src="@mipmap/icon_hum" />
 
             <TextView
                 android:id="@+id/tv_hum"
@@ -190,7 +190,7 @@
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:layout_marginStart="35dp"
-                app:srcCompat="@mipmap/icon_pressure" />
+                android:src="@mipmap/icon_pressure" />
 
             <TextView
                 android:id="@+id/tv_pressure"
@@ -227,7 +227,7 @@
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:layout_marginStart="30dp"
-                app:srcCompat="@mipmap/icon_visible" />
+                android:src="@mipmap/icon_visible" />
 
             <TextView
                 android:id="@+id/tv_visible"
@@ -264,7 +264,7 @@
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:layout_marginStart="35dp"
-            app:srcCompat="@mipmap/icon_wind" />
+            android:src="@mipmap/icon_wind" />
 
         <TextView
             android:id="@+id/tv_wind_dir"
@@ -336,9 +336,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_toEndOf="@+id/tv_air_num"
-                android:paddingEnd="8dp"
                 android:paddingStart="8dp"
-                android:text="良"
+                android:paddingEnd="8dp"
+                android:text="@string/good"
                 android:textColor="@color/white"
                 android:textSize="14sp"
                 tools:ignore="RtlSymmetry" />

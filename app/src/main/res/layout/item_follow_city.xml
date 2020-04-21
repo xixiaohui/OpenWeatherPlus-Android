@@ -11,7 +11,7 @@
         android:layout_height="44dp"
         android:layout_marginStart="17dp"
         android:layout_centerVertical="true"
-        app:srcCompat="@mipmap/icon_delete" />
+        android:src="@mipmap/icon_delete" />
 
 
     <TextView

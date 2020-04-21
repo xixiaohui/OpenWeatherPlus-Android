@@ -69,5 +69,6 @@
     <string name="welcome">欢迎来到全球天气</string>
     <string name="copyright">和风天气</string>
     <string name="copyright_res">数据来源</string>
+    <string name="good">良</string>
 
 </resources>
