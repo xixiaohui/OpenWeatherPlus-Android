@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        android:src="@mipmap/back_100d" />
+        app:srcCompat="@mipmap/back_100d" />
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/view_pager"
@@ -37,7 +37,7 @@
             android:layout_height="12dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="18dp"
-            android:src="@mipmap/icon_loc" />
+            app:srcCompat="@mipmap/icon_loc" />
 
         <TextView
             android:id="@+id/tv_location"
@@ -55,7 +55,7 @@
             android:layout_marginTop="8dp"
             android:layout_toRightOf="@+id/tv_location"
             android:padding="8dp"
-            android:src="@mipmap/icon_add_city" />
+            app:srcCompat="@mipmap/icon_add_city" />
 
         <LinearLayout
             android:id="@+id/ll_round"
@@ -72,7 +72,7 @@
             android:layout_height="44dp"
             android:layout_alignParentEnd="true"
             android:padding="14dp"
-            android:src="@mipmap/icon_set" />
+            app:srcCompat="@mipmap/icon_set" />
     </RelativeLayout>
 <!--    <com.google.android.gms.ads.AdView-->
 <!--        android:id="@+id/adView"-->

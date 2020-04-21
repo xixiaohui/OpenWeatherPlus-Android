@@ -13,10 +13,8 @@ android {
         targetSdkVersion 29
         versionCode 4
         versionName "2.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
     }
-
-
 
     signingConfigs {
         he {
@@ -44,6 +42,8 @@ android {
 
         }
     }
+
+
     sourceSets {
         main {
             jniLibs.srcDirs = ['libs']
@@ -83,15 +83,18 @@ walle {
     // 渠道配置文件
     channelFile = new File("${project.getProjectDir()}/channel")
 }
+
+
+
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
 
 
-    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
 
     testImplementation 'junit:junit:4.12'
 
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
     implementation 'joda-time:joda-time:2.10'
     implementation 'com.squareup.okhttp3:okhttp:3.10.0'
     implementation 'com.zhy:okhttputils:2.6.2'
@@ -99,7 +102,8 @@ dependencies {
     implementation files('libs/log4j-1.2.17.jar')
     implementation 'com.google.code.gson:gson:2.8.0'
     implementation files('libs/AMap_Location_V4.0.1_20180426.jar')
-    implementation files('libs/HeWeather_Public_Android_V3.3.jar')
+    api files('libs/HeWeather_Public_Android_V3.3.jar')
+
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     //firebase
@@ -114,4 +118,17 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0-alpha4'
 
     implementation 'com.google.android.material:material:1.0.0-rc01'
+
+
 }
+
+//configurations.all {
+//    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+//        def requested = details.requested
+//        if (requested.group == 'com.android.support') {
+//            if (!requested.name.startsWith("multidex")) {
+//                details.useVersion '28.0.0'
+//            }
+//        }
+//    }
+//}

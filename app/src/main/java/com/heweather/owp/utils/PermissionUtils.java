@@ -1,15 +1,14 @@
 package com.heweather.owp.utils;
 
 import android.Manifest;
-import android.app.Activity;
-import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.pm.PackageManager;
-
 import android.util.Log;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
 import com.heweather.owp.R;
@@ -60,7 +59,7 @@ public class PermissionUtils {
      * @param activity
      * @param requestCode request code, e.g. if you need request CAMERA permission,parameters is PermissionUtils.CODE_CAMERA
      */
-    public static void requestPermission(final Activity activity, final int requestCode, PermissionGrant permissionGrant) {
+    public static void requestPermission(final AppCompatActivity activity, final int requestCode, PermissionGrant permissionGrant) {
         if (activity == null) {
             return;
         }
@@ -107,7 +106,7 @@ public class PermissionUtils {
         }
     }
 
-    private static void requestMultiResult(Activity activity, String[] permissions, int[] grantResults, PermissionGrant permissionGrant) {
+    private static void requestMultiResult(AppCompatActivity activity, String[] permissions, int[] grantResults, PermissionGrant permissionGrant) {
 
         if (activity == null) {
             return;
@@ -139,7 +138,7 @@ public class PermissionUtils {
     /**
      * 一次申请多个权限
      */
-    public static void requestMultiPermissions(final Activity activity, PermissionGrant grant) {
+    public static void requestMultiPermissions(final AppCompatActivity activity, PermissionGrant grant) {
 
         final List<String> permissionsList                = getNoGrantedPermission(activity, false);
         final List<String> shouldRationalePermissionsList = getNoGrantedPermission(activity, true);
@@ -174,7 +173,7 @@ public class PermissionUtils {
     }
 
 
-    private static void shouldShowRationale(final Activity activity, final int requestCode, final String requestPermission) {
+    private static void shouldShowRationale(final AppCompatActivity activity, final int requestCode, final String requestPermission) {
         String[] permissionsHint = activity.getResources().getStringArray(R.array.permissions);
         ActivityCompat.requestPermissions(activity,
                 new String[]{
@@ -197,7 +196,7 @@ public class PermissionUtils {
 //        });
     }
 
-    private static void showMessageOKCancel(final Activity context, String message, DialogInterface.OnClickListener okListener) {
+    private static void showMessageOKCancel(final AppCompatActivity context, String message, DialogInterface.OnClickListener okListener) {
         new AlertDialog.Builder(context)
                 .setMessage(message)
                 .setPositiveButton("OK", okListener)
@@ -213,7 +212,7 @@ public class PermissionUtils {
      * @param permissions
      * @param grantResults
      */
-    public static void requestPermissionsResult(final Activity activity, final int requestCode, @NonNull String[] permissions,
+    public static void requestPermissionsResult(final AppCompatActivity activity, final int requestCode, @NonNull String[] permissions,
                                                 @NonNull int[] grantResults, PermissionGrant permissionGrant) {
 
         if (activity == null) {
@@ -249,7 +248,7 @@ public class PermissionUtils {
 
     }
 
-    private static void openSettingActivity(final Activity activity, String message) {
+    private static void openSettingActivity(final AppCompatActivity activity, String message) {
 //        Intent intent = new Intent();
 //        intent.setAction(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
 //        Log.d(TAG, "getPackageName(): " + activity.getPackageName());
@@ -275,7 +274,7 @@ public class PermissionUtils {
      * @param isShouldRationale true: return no granted and shouldShowRequestPermissionRationale permissions, false:return no granted and !shouldShowRequestPermissionRationale
      * @return
      */
-    public static ArrayList<String> getNoGrantedPermission(Activity activity, boolean isShouldRationale) {
+    public static ArrayList<String> getNoGrantedPermission(AppCompatActivity activity, boolean isShouldRationale) {
 
         ArrayList<String> permissions = new ArrayList<>();
 
