@@ -25,6 +25,12 @@ import com.amap.api.location.AMapLocation;
 import com.amap.api.location.AMapLocationClient;
 import com.amap.api.location.AMapLocationClientOption;
 import com.amap.api.location.AMapLocationListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.RequestConfiguration;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 import com.heweather.owp.dataInterface.DataInterface;
 import com.heweather.owp.dataInterface.DataUtil;
 import com.heweather.owp.R;
@@ -41,6 +47,7 @@ import com.heweather.owp.view.window.LocListWindow;
 import org.joda.time.DateTime;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import interfaces.heweather.com.interfacesmodule.bean.Code;
@@ -67,6 +74,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener, 
     private ImageView ivBack;
     private String condCode;
 
+    private AdView adView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -88,6 +97,48 @@ public class MainActivity extends BaseActivity implements View.OnClickListener, 
         setMargins(viewPager, 0, getStatusBarHeight(this) + DisplayUtil.dip2px(this, 52), 0, 0);
         setMargins(rvTitle, 0, getStatusBarHeight(this), 0, 0);
 
+
+    }
+
+//    /**
+//     * 增加banner 广告
+//     */
+//    private void initMobAds(){
+//
+//        // Initialize the Mobile Ads SDK.
+//        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+//            @Override
+//            public void onInitializationComplete(InitializationStatus initializationStatus) {}
+//        });
+//
+//        MobileAds.setRequestConfiguration(
+//                new RequestConfiguration.Builder().setTestDeviceIds(Arrays.asList("A4AEA1B55EF6D74ADE5A851019490532"))
+//                        .build());
+//
+//
+//        adView = findViewById(R.id.adView);
+//
+//        // Create an ad request.
+//        AdRequest adRequest = new AdRequest.Builder().build();
+//
+//        // Start loading the ad in the background.
+//        adView.loadAd(adRequest);
+//    }
+
+    @Override
+    protected void onPause() {
+        if (adView != null) {
+            adView.pause();
+        }
+        super.onPause();
+    }
+
+    @Override
+    protected void onDestroy() {
+        if (adView != null) {
+            adView.destroy();
+        }
+        super.onDestroy();
     }
 
     //声明AMapLocationClient类对象
@@ -234,6 +285,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener, 
                 getData(cityBeans, first);
             }
         });
+
     }
 
     private void getNow(String location, final boolean nowCity) {
@@ -373,6 +425,11 @@ public class MainActivity extends BaseActivity implements View.OnClickListener, 
     @Override
     protected void onResume() {
         super.onResume();
+
+        if (adView != null) {
+            adView.resume();
+        }
+
         DataUtil.setDataInterface(this);
         if (!ContentUtil.APP_PRI_TESI.equalsIgnoreCase(ContentUtil.APP_SETTING_TESI)) {
             if (fragments != null && fragments.size() > 0) {

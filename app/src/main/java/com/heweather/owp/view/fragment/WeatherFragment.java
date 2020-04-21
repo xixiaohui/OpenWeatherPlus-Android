@@ -24,6 +24,12 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.RequestConfiguration;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 import com.heweather.owp.MyApplication;
 import com.heweather.owp.R;
 import com.heweather.owp.adapter.ForecastAdapter;
@@ -32,6 +38,7 @@ import com.heweather.owp.presenters.WeatherInterface;
 import com.heweather.owp.presenters.impl.WeatherImpl;
 import com.heweather.owp.utils.ContentUtil;
 import com.heweather.owp.utils.IconUtils;
+import com.heweather.owp.utils.SpUtils;
 import com.heweather.owp.utils.TransUnitUtil;
 import com.heweather.owp.view.horizonview.HourlyForecastView;
 import com.heweather.owp.view.horizonview.IndexHorizontalScrollView;
@@ -43,6 +50,7 @@ import org.joda.time.DateTime;
 import org.joda.time.DateTimeZone;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import interfaces.heweather.com.interfacesmodule.bean.air.forecast.AirForecast;
@@ -123,6 +131,8 @@ public class WeatherFragment extends Fragment implements WeatherInterface {
     private RecyclerView rvForecast;
     private ForecastAdapter forecastAdapter;
 
+    private AdView adView;
+
     public static WeatherFragment newInstance(String cityId) {
         WeatherFragment fragment = new WeatherFragment();
         Bundle args = new Bundle();
@@ -145,6 +155,31 @@ public class WeatherFragment extends Fragment implements WeatherInterface {
         return rootView;
     }
 
+    /**
+     * 增加banner 广告
+     */
+    private void initMobAds(View view){
+
+        // Initialize the Mobile Ads SDK.
+        MobileAds.initialize(MyApplication.getContext(), new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(InitializationStatus initializationStatus) {}
+        });
+
+        MobileAds.setRequestConfiguration(
+                new RequestConfiguration.Builder().setTestDeviceIds(Arrays.asList("A4AEA1B55EF6D74ADE5A851019490532"))
+                        .build());
+
+
+        adView = view.findViewById(R.id.adView);
+
+        // Create an ad request.
+        AdRequest adRequest = new AdRequest.Builder().build();
+
+        // Start loading the ad in the background.
+        adView.loadAd(adRequest);
+    }
+
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
@@ -154,6 +189,8 @@ public class WeatherFragment extends Fragment implements WeatherInterface {
             initObserver();
             initView(view);
             initData(location);
+
+            initMobAds(view);
         }
     }
 
