@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.heweather.owp.R
 //import androidx.appcompat.app.AppCompatActivity
 //import com.heweather.owp.R
-import com.heweather.owp.databinding.ActivityNewBinding
+
 import com.heweather.owp.view.activity.SplashActivity
 
 class NewActivity : AppCompatActivity() {

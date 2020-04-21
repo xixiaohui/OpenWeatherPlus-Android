@@ -16,13 +16,6 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
 
-    viewBinding{
-        enabled = true
-    }
-
-    dataBinding{
-        enabled = true
-    }
 
     signingConfigs {
         he {
@@ -105,7 +98,7 @@ dependencies {
     implementation files('libs/log4j-1.2.17.jar')
     implementation 'com.google.code.gson:gson:2.8.0'
     implementation files('libs/AMap_Location_V4.0.1_20180426.jar')
-    implementation files('libs/HeWeather_Android_Common_V3.2.jar')
+    implementation files('libs/HeWeather_Public_Android_V3.3.jar')
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     //firebase

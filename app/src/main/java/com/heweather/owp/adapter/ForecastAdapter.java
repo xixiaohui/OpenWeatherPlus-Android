@@ -2,14 +2,15 @@ package com.heweather.owp.adapter;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.RecyclerView.Adapter;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.heweather.owp.R;
 import com.heweather.owp.bean.CityBean;
@@ -23,7 +24,7 @@ import java.util.List;
 
 import interfaces.heweather.com.interfacesmodule.bean.weather.forecast.ForecastBase;
 
-public class ForecastAdapter extends Adapter<ForecastAdapter.MyViewHolder> {
+public class ForecastAdapter extends RecyclerView.Adapter<ForecastAdapter.MyViewHolder> {
 
     private List<ForecastBase> datas;
     private Context context;

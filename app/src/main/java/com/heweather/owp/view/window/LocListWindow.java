@@ -1,12 +1,14 @@
 package com.heweather.owp.view.window;
 
 import android.content.Intent;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.RecyclerView;
+
 import android.view.View;
 import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 
+
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.heweather.owp.R;
 import com.heweather.owp.adapter.LocLIstAdapter;

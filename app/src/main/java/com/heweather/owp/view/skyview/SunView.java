@@ -9,11 +9,13 @@ import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.RectF;
-import android.support.annotation.Nullable;
+
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.WindowManager;
+
+import androidx.annotation.Nullable;
 
 import com.heweather.owp.R;
 import com.heweather.owp.utils.ContentUtil;

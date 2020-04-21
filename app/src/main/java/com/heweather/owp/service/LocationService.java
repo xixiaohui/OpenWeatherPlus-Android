@@ -3,8 +3,10 @@ package com.heweather.owp.service;
 import android.app.Service;
 import android.content.Intent;
 import android.os.IBinder;
-import android.support.annotation.Nullable;
+
 import android.util.Log;
+
+import androidx.annotation.Nullable;
 
 import com.amap.api.location.AMapLocation;
 import com.amap.api.location.AMapLocationClient;

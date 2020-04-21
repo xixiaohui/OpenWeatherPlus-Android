@@ -1,9 +1,7 @@
 package com.heweather.owp.adapter;
 
 import android.annotation.SuppressLint;
-import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.RecyclerView.Adapter;
+
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.TextUtils;
@@ -13,6 +11,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.heweather.owp.dataInterface.DataUtil;
 import com.heweather.owp.R;
@@ -33,7 +34,7 @@ import interfaces.heweather.com.interfacesmodule.view.HeWeather;
 /**
  * 最近搜索
  */
-public class SearchAdapter extends Adapter<RecyclerView.ViewHolder> {
+public class SearchAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     private List<CityBean> data;
     private SearchActivity activity;

@@ -1,12 +1,15 @@
 package com.heweather.owp.adapter;
 
-import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.RecyclerView.Adapter;
+
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.heweather.owp.dataInterface.DataUtil;
 import com.heweather.owp.R;
@@ -19,7 +22,7 @@ import com.heweather.owp.view.window.LocListWindow;
 import java.util.ArrayList;
 import java.util.List;
 
-public class LocLIstAdapter extends Adapter<RecyclerView.ViewHolder> {
+public class LocLIstAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     private List<CityBean> data;
     private LocListWindow locListWindow;
