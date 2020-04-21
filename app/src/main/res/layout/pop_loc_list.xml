@@ -30,7 +30,7 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="10dp"
             android:padding="3dp"
-            app:srcCompat="@mipmap/icon_search" />
+            android:src="@mipmap/icon_search" />
 
         <TextView
             android:layout_width="match_parent"

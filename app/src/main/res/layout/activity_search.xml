@@ -20,7 +20,7 @@
             android:layout_centerVertical="true"
             android:paddingEnd="10dp"
             android:paddingStart="16dp"
-            app:srcCompat="@mipmap/icon_back" />
+            android:src="@mipmap/icon_back" />
 
         <TextView
             android:layout_width="wrap_content"

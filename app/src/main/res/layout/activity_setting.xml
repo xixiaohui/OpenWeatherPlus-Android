@@ -19,7 +19,7 @@
             android:layout_centerVertical="true"
             android:paddingStart="16dp"
             android:paddingEnd="10dp"
-            app:srcCompat="@mipmap/icon_back" />
+            android:src="@mipmap/icon_back" />
 
         <TextView
             android:id="@+id/tv_setting_title"
@@ -65,7 +65,7 @@
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
                     android:layout_marginEnd="30dp"
-                    app:srcCompat="@mipmap/icon_into" />
+                    android:src="@mipmap/icon_into" />
             </RelativeLayout>
 
             <TextView
@@ -104,7 +104,7 @@
                     android:layout_centerVertical="true"
                     android:layout_marginEnd="24dp"
                     android:padding="2dp"
-                    app:srcCompat="@mipmap/icon_right" />
+                    android:src="@mipmap/icon_right" />
             </RelativeLayout>
 
             <RelativeLayout
@@ -133,7 +133,7 @@
                     android:layout_centerVertical="true"
                     android:layout_marginEnd="24dp"
                     android:padding="2dp"
-                    app:srcCompat="@mipmap/icon_right"
+                    android:src="@mipmap/icon_right"
                     android:visibility="gone" />
             </RelativeLayout>
 
@@ -163,7 +163,7 @@
                     android:layout_centerVertical="true"
                     android:layout_marginEnd="24dp"
                     android:padding="2dp"
-                    app:srcCompat="@mipmap/icon_right"
+                    android:src="@mipmap/icon_right"
                     android:visibility="gone" />
             </RelativeLayout>
 
@@ -203,7 +203,7 @@
                     android:layout_centerVertical="true"
                     android:layout_marginEnd="24dp"
                     android:padding="2dp"
-                    app:srcCompat="@mipmap/icon_right" />
+                    android:src="@mipmap/icon_right" />
             </RelativeLayout>
 
             <RelativeLayout
@@ -232,7 +232,7 @@
                     android:layout_centerVertical="true"
                     android:layout_marginEnd="24dp"
                     android:padding="2dp"
-                    app:srcCompat="@mipmap/icon_right"
+                    android:src="@mipmap/icon_right"
                     android:visibility="gone" />
             </RelativeLayout>
 
@@ -272,7 +272,7 @@
                     android:layout_centerVertical="true"
                     android:layout_marginEnd="24dp"
                     android:padding="2dp"
-                    app:srcCompat="@mipmap/icon_right" />
+                    android:src="@mipmap/icon_right" />
             </RelativeLayout>
 
             <RelativeLayout
@@ -301,7 +301,7 @@
                     android:layout_centerVertical="true"
                     android:layout_marginEnd="24dp"
                     android:padding="2dp"
-                    app:srcCompat="@mipmap/icon_right"
+                    android:src="@mipmap/icon_right"
                     android:visibility="gone" />
             </RelativeLayout>
 
@@ -331,7 +331,7 @@
                     android:layout_centerVertical="true"
                     android:layout_marginEnd="24dp"
                     android:padding="2dp"
-                    app:srcCompat="@mipmap/icon_right"
+                    android:src="@mipmap/icon_right"
                     android:visibility="gone" />
             </RelativeLayout>
 
@@ -359,7 +359,7 @@
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
                     android:layout_marginEnd="30dp"
-                    app:srcCompat="@mipmap/icon_into" />
+                    android:src="@mipmap/icon_into" />
             </RelativeLayout>
 
         </LinearLayout>
