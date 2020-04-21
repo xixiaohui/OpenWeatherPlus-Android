@@ -102,7 +102,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener, 
                 ContentUtil.NOW_LON = aMapLocation.getLongitude();
                 ContentUtil.NOW_LAT = aMapLocation.getLatitude();
                 getNowCity(true);
-                    mLocationClient.onDestroy();
+                mLocationClient.onDestroy();
             } else {
                 if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.ACCESS_FINE_LOCATION)
                         != PackageManager.PERMISSION_GRANTED || ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.READ_EXTERNAL_STORAGE)
