@@ -105,3 +105,9 @@ Android 4.4+
 
 1.加入firebase sdk
 
+2.-Global daily and hourly weather forecast, including: weather conditions, temperature, atmospheric pressure, relative humidity, precipitation, wind speed and direction, visibility, sunrise and sunset and moon rise and moon fall, etc.
+  -Hourly weather dynamic curve
+  -City search, support fuzzy search and search suggestions
+  -Multi-language, currently supports Chinese and English
+  -Unit conversion
+  -Different font sizes can be set
