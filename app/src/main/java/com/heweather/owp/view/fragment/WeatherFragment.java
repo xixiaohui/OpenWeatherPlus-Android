@@ -174,18 +174,18 @@ public class WeatherFragment extends Fragment implements WeatherInterface {
     /**
      * 增加banner 广告
      */
-    private void initMobAds(View view){
+    private void initMobAds(View view) {
 
         // Initialize the Mobile Ads SDK.
         MobileAds.initialize(MyApplication.getContext(), new OnInitializationCompleteListener() {
             @Override
-            public void onInitializationComplete(InitializationStatus initializationStatus) {}
+            public void onInitializationComplete(InitializationStatus initializationStatus) {
+            }
         });
 
         MobileAds.setRequestConfiguration(
                 new RequestConfiguration.Builder().setTestDeviceIds(Arrays.asList("A4AEA1B55EF6D74ADE5A851019490532"))
                         .build());
-
 
         adView = view.findViewById(R.id.adView);
 

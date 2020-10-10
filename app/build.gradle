@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
 apply plugin: 'walle'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
@@ -11,8 +12,8 @@ android {
         applicationId "com.heweather.owp"
         minSdkVersion 21
         targetSdkVersion 29
-        versionCode 5
-        versionName "2.1"
+        versionCode 6
+        versionName "2.2"
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
     }
 
@@ -103,11 +104,9 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.8.0'
 
 
-
-
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    //firebase
-//    implementation 'com.google.firebase:firebase-analytics:17.2.2'
+    //add the Firebase SDK for Google Analytics
+    implementation 'com.google.firebase:firebase-analytics:17.2.2'
     //AdMob
     implementation 'com.google.android.gms:play-services-ads:19.0.1'
 
